@@ -1,4 +1,4 @@
-- name: ping the server
-  hosts: webservers  #managed hosts 
-  tasks: #list of tasks/modules/collections
-  - name: ping the server
+- name: ping the host to check connectivity
+  hosts: webservers
+  - name: ping the host
+    ping: 
