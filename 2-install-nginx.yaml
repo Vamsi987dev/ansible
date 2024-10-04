@@ -1,0 +1,8 @@
+- name: install nginx on redhat
+  hosts: webservers
+  become: yes
+  tasks:
+    - name: install nginx
+      dnf
+      name: nginx
+      state: present
