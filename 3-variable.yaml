@@ -1,0 +1,9 @@
+- name: variables
+  hosts: webservers
+  vars: 
+    name: "i am vamsi"
+    role: "devops engineer"
+  tasks:
+    - name: name and job role
+      ansible.builtin.debug:
+        msg: "Hi {{name}}, and i work as a {{role}} for amazon"
