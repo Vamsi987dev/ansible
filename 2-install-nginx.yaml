@@ -4,5 +4,5 @@
   tasks:
     - name: install nginx
       dnf
-      name: nginx
-      state: present
+        name: nginx
+        state: present  
