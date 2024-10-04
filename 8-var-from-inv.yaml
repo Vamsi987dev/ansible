@@ -1,0 +1,6 @@
+- name: assigning variables from inventory file
+  hosts: webservers
+  tasks:
+    - name: print the information
+      ansible.builtin.debug:
+        msg: "i am {{name}}, and i work as {{role}} for amazon"
