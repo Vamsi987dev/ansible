@@ -16,7 +16,7 @@
           - networking
           - database
       ansible.builtin.debug:
-        msg: "I have handson tools like {{tools | join (',')}}"
+        msg: "I have handson tools like {{tools | join (', ')}}"
   
     - name: Age and address details
       vars:
