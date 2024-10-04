@@ -1,7 +1,11 @@
 - name: employee details playbook
   hosts: localhost
   tasks:
-    - name: print name and role 
+    - name: print name and role
+      vars:
+        name: "Vamsi"
+        role: "Devops engineer"
+        experience: 3.5
       ansible.builtin.debug:
         msg: "Hi, i am {{name}}, working as a {{role}} with {{experience}} years of experience"
   
