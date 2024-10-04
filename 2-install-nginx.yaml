@@ -3,6 +3,11 @@
   become: yes
   tasks:
     - name: install nginx
-      dnf:
+      ansible.builtin.package:
         name: nginx
-        state: present  
+        state: present
+    - name: start and enable nginx service
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
