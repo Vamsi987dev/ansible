@@ -1,4 +1,5 @@
-- name: ping the host to check connectivity
+-name: ping to check the connectivity
   hosts: webservers
-  - name: ping the host
-    ping: 
+  tasks:
+    -name: ping the host
+     ping: 
