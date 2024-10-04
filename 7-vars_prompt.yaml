@@ -1,0 +1,14 @@
+- name: prompt users to input
+  hosts: webservers
+  vars_prompt:
+    - name: "username"
+      prompt: "Enter your username"
+    
+    - name: "password"
+      prompt: "enter your password"
+  
+  tasks:
+    - name: display username and password
+      ansible.builtin.debug:
+        msg: "username is {{username}} and password is {{password}}"
+        
