@@ -3,6 +3,6 @@
   become: yes
   tasks:
     - name: install nginx
-      dnf
+      dnf:
         name: nginx
         state: present  
