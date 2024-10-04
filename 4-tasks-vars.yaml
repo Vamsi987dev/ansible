@@ -12,3 +12,4 @@
         name: "Battu"
       ansible.builtin.debug:
         msg: "Hi {{name}}, and i work as a {{role}} for amazon"
+        

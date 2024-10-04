@@ -1,0 +1,8 @@
+- name: read from variable file
+  hosts: webservers
+  vars_files:
+    - 5-variable-file.yaml
+  tasks:
+    - name: print the name and job role
+      ansible.builtin.debug:
+        msg: "Hi, i am {{name}}, and i work as {{role}} for amazon "
