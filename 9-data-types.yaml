@@ -1,0 +1,28 @@
+- name: employee details playbook
+  hosts: localhost
+  tasks:
+    - name: print name and role 
+      ansible.builtin.debug:
+        msg: "Hi, i am {{name}}, working as a {{role}} with {{experience}} years of experience"
+  
+  tasks:
+    - name: Tools and technologies
+      vars:
+        tools:
+          - linux
+          - networking
+          - database
+      ansible.builtin.debug:
+        msg: "I have handson tools like {{tools | join (',')}}"
+  
+  tasks:
+    - name: Age and address details
+      vars:
+        age: 25
+        address: "hyd"
+      ansible.builtin.debug:
+        msg: "I am {{age}}, and resides at {{address}}"
+    
+
+
+       
