@@ -1,0 +1,11 @@
+- name: Create user
+  hosts: web
+  become: yes 
+  tasks:
+    - name: create user if not exists
+      ansible.builtin.command: id expense
+      register: user
+      when: user.rc != 0
+      
+
+
