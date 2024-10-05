@@ -3,5 +3,5 @@
   connection: local
   tasks:
     - name: print default variable
-     debug:
-      msg: "i am {{ name | default('vamsi') }}"
+      debug:
+        msg: "i am {{ name | default('vamsi') }}"
