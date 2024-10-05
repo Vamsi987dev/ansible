@@ -21,5 +21,9 @@
     loop: "{{ instances }}"
     register: ec2_instances
 
+  - name: print output
+    debug:
+      msg: "{{ ec2_instances }}"
+
 
 
