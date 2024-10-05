@@ -1,0 +1,7 @@
+- name: functions or filters
+  hosts: local
+  connection: local
+  tasks:
+    - name: print default variable
+     debug:
+      msg: "i am {{ name | default('vamsi') }}"
