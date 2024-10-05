@@ -5,7 +5,7 @@
   - name: loop
     ansible.builtin.debug:
       msg: "{{item}}"
-    loop:
+    with_items:
     - vamsi
     - battu
     - bittu
