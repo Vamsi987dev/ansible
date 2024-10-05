@@ -6,4 +6,4 @@
     
     - name: show os information
       debug:
-        msg: "{{ansible_facts[distribution]}} {{ansible_facts[distribution_version]}}"
+        msg: "{{ansible_facts['distribution']}} {{ansible_facts['distribution_version']}}"
