@@ -24,7 +24,7 @@
     
     - name: remove duplicates
       debug:
-        msg: "{{[ 1, 2, 2, 4, 4 ] | unique }}"
+        msg: "{{[ 4, 4, 2, 2, 1, 1 ] | unique }}"
 
     
 
