@@ -21,4 +21,10 @@
     - name: sort the list
       debug:
         msg: "{{ [3, 5, 2, 4, 1] | sort }}"
+    
+    - name: remove duplicates
+      debug:
+        msg: "{{[ 1, 2, 2, 4, 4 ] | unique }}"
+
+    
 
