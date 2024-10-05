@@ -1,0 +1,16 @@
+- name: number comparison
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: "user_number"
+      prompt: "please enter a number"
+      private: no 
+  tasks:
+  - name: check if number is greater than 10
+    debug:
+      msg: "the number {{user_number}} is greater than 10"
+    when: user_number | int > 10
+  - name: check if number is less than 10
+    debug:
+      msg: "the number {{user_number}} is less than 10"
+    when: user_number | int < 10
