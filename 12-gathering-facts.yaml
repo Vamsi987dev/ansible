@@ -1,0 +1,9 @@
+- name: display os information
+  hosts: web
+  tasks:
+    - name: gather facts
+      setup:
+    
+    - name: show os information
+      debug:
+        msg: "{{ansible_facts[distribution]}} {{ansible_facts[distribution_version]}}"
