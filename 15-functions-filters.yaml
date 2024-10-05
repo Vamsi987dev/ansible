@@ -20,5 +20,5 @@
 
     - name: sort the list
       debug:
-        msg: "{{ 3, 5, 2, 4, 1 | sort }}"
+        msg: "{{ [3, 5, 2, 4, 1] | sort }}"
 
