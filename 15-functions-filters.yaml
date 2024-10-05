@@ -5,3 +5,20 @@
     - name: print default variable
       debug:
         msg: "i am {{ name | default('vamsi') }}"
+    
+    - name: convert to upper case
+      vars:
+        role: "devops"
+      debug:
+        msg: "I am {{ 'role' | Upper }}"
+
+    - name: replace age 
+      vars:
+        age: 25
+      debug:
+        msg: "i am {{ 'age' | replace('age','45') }}"
+
+    - name: sort the list
+      debug:
+        msg: "{{ 3, 5, 2, 4, 1 | sort }}"
+
