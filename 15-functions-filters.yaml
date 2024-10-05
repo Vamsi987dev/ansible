@@ -26,5 +26,20 @@
       debug:
         msg: "{{[ 4, 4, 2, 2, 1, 1 ] | sort | unique }}"
 
+    - name: converts dict into list of items
+      vars:
+        my_dict:
+          key1: "value1"
+          key2: "value2"
+      debug:
+        msg: "{{ my_dict | dict2items }}"
+
+    - name: convert list of items back to dictionary
+      my_list:
+      - {key: 'key1', value: 'value1'}
+      - {key: 'key2', value: 'value2'}
+      debug:
+        msg: "{{ my_list | items2dict }}"
+
     
 
